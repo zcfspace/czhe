@@ -22,8 +22,8 @@ app.set('view enginr', 'ejs')
 
 app.get('/render', (req, res) => {
     const personas = ['Jack', 'Karen', 'John', 'Mary', 'Peter', 'Lucas'];
-    res.render(__dirname + '/views/index.ejs', {
-        nombreIndex: personas
+    res.render(__dirname + "/views/index.ejs", {
+        personas
     })
 });
 
