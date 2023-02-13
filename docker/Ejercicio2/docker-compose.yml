@@ -10,6 +10,7 @@ services:
       mi-mysql-red:
         ipv4_address: 172.25.0.12
     container_name: mi-mysql
+    restart: always
 
   dashboard:
     image: phpmyadmin
@@ -23,9 +24,11 @@ services:
       mi-mysql-red:
         ipv4_address: 172.25.0.11
     container_name: mi-dashboard
+    restart: always
 
 volumes:
   mi-mysql-vol:
+
 
 networks:
   mi-mysql-red:

@@ -10,6 +10,7 @@ services:
       mi-red:
         ipv4_address: 172.24.0.12
     container_name: mi-mongo
+    restart: always
 
   mongo-express:
     image: mongo-express
@@ -23,15 +24,14 @@ services:
       mi-red:
         ipv4_address: 172.24.0.11
     container_name: mi-mongo-express
-    
+    restart: always
+
 volumes:
   mi-volumen:
+
 
 networks:
   mi-red:
     ipam:
       config:
         - subnet: 172.24.0.0/16
-
-
-
